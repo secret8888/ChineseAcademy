@@ -1,0 +1,42 @@
+<resources>
+
+    <string-array name="main_title_array">
+        <item>2015 中国卒中学会第一届学术年会</item>
+        <item>大会日程</item>
+        <item>大会学术交流安排</item>
+        <item>交通信息</item>
+        <item>旅游信息</item>
+    </string-array>
+
+    <string-array name="main_name_array">
+        <item>天坛会</item>
+        <item>天坛会会议日程</item>
+        <item>天坛会历史</item>
+    </string-array>
+
+    <string-array name="main_url_array">
+        <item>http://tisc.mediwelcome.com/</item>
+        <item>http://tisc.mediwelcome.com/custom/HuiYiRiCheng</item>
+        <item>http://tisc.mediwelcome.com/custom/DaHuiXueShuJiaoLiuAnPai</item>
+        <item>http://tisc.mediwelcome.com/custom/JiaoTongXinXi</item>
+        <item>http://tisc.mediwelcome.com/custom/LvYouXinXi#</item>
+    </string-array>
+
+    <string-array name="main_news_title_array">
+        <item>学术委员</item>
+        <item>往届掠影</item>
+        <item>继续医学教育学分</item>
+    </string-array>
+
+    <string-array name="main_news_content_array">
+        <item>学术委员会（以下排名不分先后）大会主席：赵继宗 大会名誉主席团：戴建平，吕传真，饶明俐，李舜伟，郭玉璞，秦震，董为伟，魏岗，朱镛连，高晓兰，黄如训，王维治，王纪佐，高润霖，胡大一 ，张苏明，胡学强 大会执行主席：王拥军，葛均波，纪立农，董强，徐安定，缪中荣 大会执行主席团：陈康宁，崔丽英，董强，樊东升，葛均波，郭力，何俐，胡波，胡汉华，黄家星 等。</item>
+        <item>往届天坛会掠影</item>
+        <item>本届大会授予国家继续教育学分，凡全程参与大会的注册参会代表可获得国家级Ⅰ类教育学分。</item>
+    </string-array>
+
+    <string-array name="main_news_url_array">
+        <item>http://tisc.mediwelcome.com/custom/XueShuWeiYuan#/</item>
+        <item>http://tisc.mediwelcome.com/custom/WangJieHuiGu</item>
+        <item>http://tisc.mediwelcome.com/custom/JiaoYuXueFen#</item>
+    </string-array>
+</resources>

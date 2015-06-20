@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/academy_space_large"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/lv_title"
+        layout="@layout/view_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/academy_space_large"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_qrcode"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="@dimen/ts_20"
+            android:text="Android版"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/academy_space_common"
+            android:layout_weight="1"
+            android:src="@drawable/ic_qrcode_ios"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="@dimen/ts_20"
+            android:text="IOS版"
+            />
+    </LinearLayout>
+</LinearLayout>

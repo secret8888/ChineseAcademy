@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:paddingBottom="@dimen/academy_space_large"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/lv_title"
+        layout="@layout/view_title" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/academy_space_medium"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+        <RelativeLayout
+            style="@style/MineItemLayout"
+            android:visibility="gone"
+            >
+            <TextView
+                style="@style/MineTitleText"
+                android:textColor="@color/black"
+                android:text="@string/profile"
+                android:drawablePadding="@dimen/academy_space_common"
+                android:drawableLeft="@drawable/ic_profile"
+                />
+
+            <ImageView
+                style="@style/ProfileArrowStyle"
+                />
+        </RelativeLayout>
+
+        <View
+            style="@style/DividerViewStyle"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            style="@style/MineItemLayout"
+            android:visibility="gone"
+            >
+            <TextView
+                style="@style/MineTitleText"
+                android:textColor="@color/black"
+                android:text="@string/message"
+                android:drawablePadding="@dimen/academy_space_common"
+                android:drawableLeft="@drawable/ic_message"
+                />
+
+            <ImageView
+                style="@style/ProfileArrowStyle"
+                />
+        </RelativeLayout>
+
+        <View
+            style="@style/DividerViewStyle"
+            android:visibility="gone"
+            />
+
+        <RelativeLayout
+            style="@style/MineItemLayout"
+            >
+            <TextView
+                style="@style/MineTitleText"
+                android:textColor="@color/black"
+                android:text="@string/remind"
+                android:drawablePadding="@dimen/academy_space_common"
+                android:drawableLeft="@drawable/ic_remind"
+                />
+
+            <ImageView
+                style="@style/ProfileArrowStyle"
+                android:background="@drawable/ic_switch_on"
+                />
+        </RelativeLayout>
+
+        <View style="@style/DividerViewStyle" />
+
+        <RelativeLayout
+            style="@style/MineItemLayout"
+            android:onClick="onHelpClick"
+            >
+            <TextView
+                style="@style/MineTitleText"
+                android:textColor="@color/black"
+                android:text="@string/help"
+                android:drawablePadding="@dimen/academy_space_common"
+                android:drawableLeft="@drawable/ic_help"
+                />
+
+            <ImageView
+                style="@style/ProfileArrowStyle"
+                />
+        </RelativeLayout>
+
+        <View style="@style/DividerViewStyle" />
+
+        <RelativeLayout
+            style="@style/MineItemLayout"
+            >
+            <TextView
+                style="@style/MineTitleText"
+                android:textColor="@color/black"
+                android:text="@string/software_update"
+                android:drawablePadding="@dimen/academy_space_common"
+                android:drawableLeft="@drawable/ic_update"
+                />
+
+            <ImageView
+                style="@style/ProfileArrowStyle"
+                />
+        </RelativeLayout>
+
+        <View style="@style/DividerViewStyle" />
+
+        <TextView
+            android:id="@+id/tv_switch_account"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:paddingTop="@dimen/academy_space_middle"
+            android:paddingBottom="@dimen/academy_space_middle"
+            android:gravity="center"
+            android:text="@string/switch_account"
+            android:textColor="@color/text_blue"
+            android:textSize="@dimen/ts_16"
+            android:background="@color/bg_gray"
+            android:clickable="true"
+            android:onClick="onSwitchAccountClick"
+            />
+
+        <TextView
+            android:id="@+id/tv_detail"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/academy_space_common"
+            android:paddingTop="@dimen/academy_space_middle"
+            android:paddingBottom="@dimen/academy_space_middle"
+            android:gravity="center"
+            android:text="@string/logout"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ts_16"
+            android:background="@color/text_green"
+            android:clickable="true"
+            android:onClick="onLogoutClick"
+            />
+    </LinearLayout>
+</LinearLayout>

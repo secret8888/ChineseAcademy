@@ -1,0 +1,243 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/academy_title_height"
+        android:background="#0175bf">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ts_19"
+            android:text="@string/main_title" />
+
+        <ImageView
+            android:id="@+id/im_setting"
+            android:layout_width="@dimen/academy_title_height"
+            android:layout_height="@dimen/academy_title_height"
+            android:layout_alignParentRight="true"
+            android:scaleType="center"
+            android:src="@drawable/ic_setting" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/academy_space_common"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp">
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_banner_1" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_banner_2" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_banner_3" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_banner_4" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_banner_5" />
+
+                </android.support.v4.view.ViewPager>
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_trans_gray"
+                    android:paddingLeft="@dimen/academy_space_medium"
+                    android:paddingRight="@dimen/academy_space_normal"
+                    android:paddingTop="@dimen/academy_space_small"
+                    android:paddingBottom="@dimen/academy_space_small"
+                    android:singleLine="true"
+                    android:textSize="@dimen/ts_14"
+                    android:textColor="@color/text_light_blue" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/ts_11"
+                android:textColor="@color/text_dark_gray"
+                android:layout_marginTop="@dimen/academy_space_medium"
+                android:layout_marginLeft="@dimen/academy_space_common"
+                android:text="新闻会议" />
+
+            <LinearLayout
+                android:id="@+id/lv_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/academy_space_normal"
+                android:layout_marginLeft="@dimen/academy_space_medium"
+                android:layout_marginRight="@dimen/academy_space_medium"
+                android:orientation="vertical">
+
+                <com.stroke.academy.view.MainNewsView
+                    android:id="@+id/lv_news_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <com.stroke.academy.view.MainNewsView
+                    android:id="@+id/lv_news_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <com.stroke.academy.view.MainNewsView
+                    android:id="@+id/lv_news_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/academy_space_medium"
+                android:layout_marginLeft="@dimen/academy_space_common"
+                android:textSize="@dimen/ts_11"
+                android:textColor="@color/text_dark_gray"
+                android:text="线上服务" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/academy_space_medium"
+                android:layout_marginLeft="@dimen/academy_space_medium"
+                android:layout_marginRight="@dimen/academy_space_medium"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:id="@+id/lv_meeting_video"
+                        style="@style/MainFunctionLayout"
+                        >
+                        <ImageView
+                            style="@style/NormalLayout"
+                            android:background="@drawable/ic_meeting_video"
+                            />
+                        <TextView
+                            style="@style/MainFunctionText"
+                            android:text="@string/meeting_video"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lv_article_browse"
+                        style="@style/MainFunctionLayout"
+                        >
+                        <ImageView
+                            style="@style/NormalLayout"
+                            android:background="@drawable/ic_doc_browse"
+                            />
+                        <TextView
+                            style="@style/MainFunctionText"
+                            android:text="@string/doc_browse"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lv_base_train"
+                        style="@style/MainFunctionLayout"
+                        >
+                        <ImageView
+                            style="@style/NormalLayout"
+                            android:background="@drawable/ic_base_train"
+                            />
+                        <TextView
+                            style="@style/MainFunctionText"
+                            android:text="@string/base_train"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/academy_space_medium"
+                    android:orientation="horizontal"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/lv_mobile_check"
+                        style="@style/MainFunctionLayout"
+                        >
+                        <ImageView
+                            style="@style/NormalLayout"
+                            android:background="@drawable/ic_mobile_check"
+                            />
+                        <TextView
+                            style="@style/MainFunctionText"
+                            android:text="@string/mobile_check"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lv_network_metting"
+                        style="@style/MainFunctionLayout"
+                        >
+                        <ImageView
+                            style="@style/NormalLayout"
+                            android:background="@drawable/ic_network_metting"
+                            />
+                        <TextView
+                            style="@style/MainFunctionText"
+                            android:text="@string/network_meeting"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lv_international_online"
+                        style="@style/MainFunctionLayout"
+                        >
+                        <ImageView
+                            style="@style/NormalLayout"
+                            android:background="@drawable/ic_international_online"
+                            />
+                        <TextView
+                            style="@style/MainFunctionText"
+                            android:text="@string/international_online"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

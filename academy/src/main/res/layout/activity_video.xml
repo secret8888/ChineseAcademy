@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical"
+    >
+
+    <include
+        layout="@layout/view_title"
+        />
+
+    <com.stroke.academy.view.VideoControllerView
+        android:id="@+id/video_controller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/academy_space_medium"
+        android:layout_marginRight="@dimen/academy_space_medium"
+        android:layout_marginTop="@dimen/academy_space_normal"
+        android:layout_marginBottom="@dimen/academy_space_common"
+        android:paddingTop="@dimen/academy_space_common"
+        android:paddingLeft="30dp"
+        android:paddingRight="@dimen/academy_space_large"
+        android:paddingBottom="@dimen/academy_space_large"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_speaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/ts_15"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/academy_space_medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/ts_15"
+            android:text="@string/content"
+            />
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/academy_space_medium"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/ts_15"
+            />
+    </LinearLayout>
+</LinearLayout>

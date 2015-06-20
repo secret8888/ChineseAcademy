@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/emilyu/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.4.0/5b72bf48563ea8410e650de14aa33ff69a3e8c35/okio-1.4.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="5b72bf48563ea8410e650de14aa33ff69a3e8c35">
+        <dex dex="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/build/intermediates/pre-dexed/debug/okio-1.4.0-5c5b96c3e5d878865c0bec0706493043da50c175.jar" />
+    </item>
+    <item
+        jar="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/libs/universal-image-loader-1.9.4-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="831368dfdef2c9396955489e9058e6ad8a8e4244">
+        <dex dex="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.4-SNAPSHOT-d0d9d48107b6778432ecfe284bf26b46c303cf26.jar" />
+    </item>
+    <item
+        jar="/home/emilyu/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.4.0/40340c0748190fe897baf7bffbc1b282734294e5/okhttp-2.4.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
+        <dex dex="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/build/intermediates/pre-dexed/debug/okhttp-2.4.0-cdc3c1063c12744827be9006b61570a93e26e511.jar" />
+    </item>
+    <item
+        jar="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/libs/YDAnimation-1.0.1.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="9f47f9f40e3935bc7277fa36de1d9ff324c62be6">
+        <dex dex="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/build/intermediates/pre-dexed/debug/YDAnimation-1.0.1-ca6bcac123ff1322a51d06c0fd9cdfe21566af7d.jar" />
+    </item>
+    <item
+        jar="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/libs/android-async-http-1.4.7.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="cd78109020f9ec803ef4e652c17ee4615b03e20a">
+        <dex dex="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/build/intermediates/pre-dexed/debug/android-async-http-1.4.7-452970eddaf99839d152529eec6df9791e63ea6a.jar" />
+    </item>
+    <item
+        jar="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/libs/bcprov-jdk15on-152.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="88a941faf9819d371e3174b5ed56a3f3f7d73269">
+        <dex dex="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/build/intermediates/pre-dexed/debug/bcprov-jdk15on-152-3da891fa4d6a2621f2df4aeb1b0584a9695140cc.jar" />
+    </item>
+    <item
+        jar="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/libs/YDJson-1.0.3.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="a5bd94bfb8ec4d86457e9306ca85c0614bf5c393">
+        <dex dex="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/build/intermediates/pre-dexed/debug/YDJson-1.0.3-240f2068c82a02285dbf134158c725432a3eac58.jar" />
+    </item>
+    <item
+        jar="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/libs/android-support-v4.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="efec67655f6db90757faa37201efcee2a9ec3507">
+        <dex dex="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/build/intermediates/pre-dexed/debug/android-support-v4-88a5e1d3c39d38fa89ca160817b1c2c19f8c3ef1.jar" />
+    </item>
+
+</items>

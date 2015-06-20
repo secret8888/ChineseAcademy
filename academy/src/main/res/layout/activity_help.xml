@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:paddingBottom="@dimen/academy_space_large"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/lv_title"
+        layout="@layout/view_title" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/academy_space_medium"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+        <RelativeLayout
+            style="@style/MineItemLayout"
+            android:onClick="onIntroClick"
+            >
+            <TextView
+                style="@style/MineTitleText"
+                android:textColor="@color/black"
+                android:text="@string/software_intro"
+                android:drawablePadding="@dimen/academy_space_common"
+                />
+
+            <ImageView
+                style="@style/ProfileArrowStyle"
+                />
+        </RelativeLayout>
+
+        <View style="@style/DividerViewStyle" />
+
+        <RelativeLayout
+            style="@style/MineItemLayout"
+            android:onClick="onUseHelpClick"
+            >
+            <TextView
+                style="@style/MineTitleText"
+                android:textColor="@color/black"
+                android:text="@string/software_use_help"
+                android:drawablePadding="@dimen/academy_space_common"
+                />
+
+            <ImageView
+                style="@style/ProfileArrowStyle"
+                />
+        </RelativeLayout>
+
+        <View style="@style/DividerViewStyle" />
+
+        <RelativeLayout
+            style="@style/MineItemLayout"
+            android:onClick="onQrCodeClick"
+            >
+            <TextView
+                style="@style/MineTitleText"
+                android:textColor="@color/black"
+                android:text="@string/qrcode"
+                android:drawablePadding="@dimen/academy_space_common"
+                />
+
+            <ImageView
+                style="@style/ProfileArrowStyle"
+                />
+        </RelativeLayout>
+
+        <View style="@style/DividerViewStyle" />
+
+    </LinearLayout>
+</LinearLayout>

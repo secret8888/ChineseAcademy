@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
+
+    <include
+        android:id="@+id/lv_title"
+        layout="@layout/view_title" />
+
+    <com.stroke.academy.view.refresh.RefreshListView
+        android:id="@+id/list_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lv_title"
+        android:layout_margin="@dimen/academy_space_medium"
+        android:background="@drawable/corner_shape_bg"
+        android:divider="@color/bg_gray"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none" />
+</RelativeLayout>

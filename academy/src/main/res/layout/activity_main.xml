@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/realtabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/tab_rg_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:background="@color/bg_gray"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/tab_main"
+            style="@style/tab_rb_style"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_main_selector"
+            android:text="@string/main"
+            />
+
+        <RadioButton
+            android:id="@+id/tab_message"
+            style="@style/tab_rb_style"
+            android:drawableTop="@drawable/tab_message_selector"
+            android:text="@string/message" />
+
+        <RadioButton
+            android:id="@+id/tab_mine"
+            style="@style/tab_rb_style"
+            android:drawableTop="@drawable/tab_mine_selector"
+            android:text="@string/mine" />
+    </RadioGroup>
+
+    <android.support.v4.app.FragmentTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0" />
+    </android.support.v4.app.FragmentTabHost>
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/im_guide_1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/im_guide_2" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_reject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reject"
+                android:textSize="@dimen/ts_17"
+                android:textColor="@color/text_dark_gray"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginBottom="63dp"
+                android:clickable="true"
+                android:onClick="onRejectClick"/>
+
+            <TextView
+                android:id="@+id/tv_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/accept"
+                android:textColor="@color/text_blue"
+                android:textSize="@dimen/ts_17"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="63dp"
+                android:clickable="true"
+                android:onClick="onAcceptClick"/>
+
+            <TextView
+                android:id="@+id/tv_agreement_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tv_reject"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="@dimen/academy_space_medium"
+                android:textSize="@dimen/ts_11"
+                android:textColor="@color/text_green"
+                android:text="@string/agreement_tip" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/tv_agreement_tip"
+                android:padding="16dp"
+                android:layout_marginLeft="@dimen/academy_space_large"
+                android:layout_marginRight="@dimen/academy_space_large"
+                android:layout_marginTop="55dp"
+                android:background="@drawable/bg_guide_agreement">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/academy_space_large"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/agreement_title"
+                        android:textColor="@color/text_blue"
+                        android:textSize="@dimen/ts_17" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@id/tv_agreement_tip"
+                        android:textSize="@dimen/ts_13"
+                        android:layout_marginTop="@dimen/academy_space_large"
+                        android:text="@string/agreement"
+                        />
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>F
+
+    </android.support.v4.view.ViewPager>
+
+
+</RelativeLayout>

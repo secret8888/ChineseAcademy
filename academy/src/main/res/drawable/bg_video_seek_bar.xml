@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 背景图 -->
+    <item
+        android:id="@android:id/background"
+        android:drawable="@drawable/bg_video_seekbar"/>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <solid android:color="@color/white" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

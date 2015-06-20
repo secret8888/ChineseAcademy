@@ -1,0 +1,58 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/academy_space_medium"
+    android:paddingRight="@dimen/academy_space_medium"
+    android:paddingTop="@dimen/academy_space_normal"
+    android:paddingBottom="@dimen/academy_space_normal"
+    >
+
+    <ImageView
+        android:id="@+id/im_index"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="@dimen/academy_space_medium"
+        android:scaleType="centerCrop"
+        android:src="@color/black"
+        />
+
+    <ImageView
+        android:id="@+id/im_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/academy_space_medium"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_arrow"
+        />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/im_index"
+        android:layout_toLeftOf="@id/im_arrow"
+        android:layout_marginTop="@dimen/academy_space_normal"
+        android:layout_alignTop="@id/im_index"
+        android:textColor="@color/text_light_blue"
+        android:textSize="@dimen/ts_14"
+        android:singleLine="true"
+        android:text="新闻会议标题"
+        />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/im_index"
+        android:layout_toLeftOf="@id/im_arrow"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="@dimen/academy_space_tiny"
+        android:lineSpacingExtra="@dimen/academy_space_small"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/ts_13"
+        android:singleLine="true"
+        android:text="简介或者照耀或者前一段内容的简介"
+        />
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="bg_gray">#edefee</color>
+    <color name="bg_trans_gray">#ccedefee</color>
+    <color name="text_black">#808080</color>
+    <color name="text_dark_gray">#727171</color>
+    <color name="text_blue">#0175bf</color>
+    <color name="text_light_blue">#339599</color>
+    <color name="text_grey">#b6afa2</color>
+    <color name="text_green">#45b036</color>
+    <color name="transparent_cover_gray">#c6222222</color>
+
+    <!-- video -->
+    <color name="onclick_bg">#33000000</color>
+    <color name="trans_black">#77000000</color>
+
+    <!-- pull to refresh -->
+    <color name="title_color">#333333</color>
+</resources>

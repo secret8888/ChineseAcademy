@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
+
+    <include
+        android:id="@+id/lv_title"
+        layout="@layout/view_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lv_title"
+        android:layout_margin="@dimen/academy_space_medium"
+        android:scrollbars="none"
+        >
+        <LinearLayout
+            android:id="@+id/list_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/academy_space_common"
+            android:paddingRight="@dimen/academy_space_common"
+            android:paddingBottom="@dimen/academy_space_huge"
+            android:background="@color/white"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_subject"
+                style="@style/ArticleDetailText"
+                />
+
+            <TextView
+                android:id="@+id/tv_author"
+                style="@style/ArticleDetailText"
+                />
+
+            <TextView
+                android:id="@+id/tv_translator"
+                style="@style/ArticleDetailText"
+                />
+
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/ArticleDetailText"
+                />
+
+            <TextView
+                android:id="@+id/tv_source"
+                style="@style/ArticleDetailText"
+                />
+
+            <TextView
+                style="@style/ArticleDetailText"
+                android:text="@string/intro"
+                />
+
+            <TextView
+                android:id="@+id/tv_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/academy_space_medium"
+                android:textColor="@color/text_dark_gray"
+                android:textSize="@dimen/ts_14"
+                />
+
+            <TextView
+                android:id="@+id/tv_detail"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/academy_space_huge"
+                android:paddingTop="@dimen/academy_space_middle"
+                android:paddingBottom="@dimen/academy_space_middle"
+                android:gravity="center"
+                android:text="@string/view_detail"
+                android:textColor="@color/white"
+                android:textSize="@dimen/ts_16"
+                android:background="@color/text_green"
+                />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
