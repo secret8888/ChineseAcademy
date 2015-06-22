@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="YDJson-1.0.3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/academy/libs/YDJson-1.0.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

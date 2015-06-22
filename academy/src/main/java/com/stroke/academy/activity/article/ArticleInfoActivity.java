@@ -1,8 +1,12 @@
 package com.stroke.academy.activity.article;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.stroke.academy.R;
@@ -16,8 +20,10 @@ import com.stroke.academy.common.http.HttpManager;
 import com.stroke.academy.common.util.AES256;
 import com.stroke.academy.common.util.DownloadManager;
 import com.stroke.academy.common.util.Logcat;
+import com.stroke.academy.common.util.Toaster;
 import com.stroke.academy.common.util.Utils;
 import com.stroke.academy.model.ArticleData;
+import com.stroke.academy.model.ArticleItem;
 import com.stroke.academy.model.HandleInfo;
 import com.stroke.academy.view.refresh.RefreshListView;
 import com.youdao.yjson.YJson;
@@ -27,8 +33,7 @@ import java.io.File;
 /**
  * Created by emilyu on 6/11/15.
  */
-public class ArticleInfoActivity extends BaseActivity implements
-        View.OnClickListener, AdapterView.OnItemClickListener{
+public class ArticleInfoActivity extends BaseActivity implements View.OnClickListener {
     @ViewId(R.id.tv_title)
     private TextView titleView;
 
@@ -56,7 +61,10 @@ public class ArticleInfoActivity extends BaseActivity implements
     @ViewId(R.id.tv_detail)
     private TextView detailView;
 
-    private ArticleData articleData;
+    @ViewId(R.id.pbar_download)
+    private ProgressBar downloadBar;
+
+    private ArticleItem articleItem;
 
     private String id;
 
@@ -74,7 +82,7 @@ public class ArticleInfoActivity extends BaseActivity implements
     protected void initControls(Bundle savedInstanceState) {
         titleView.setText(R.string.detail);
         onShowLoadingDialog();
-        getArticleList();
+        getArticleInfo();
     }
 
     @Override
@@ -90,91 +98,79 @@ public class ArticleInfoActivity extends BaseActivity implements
                 onBackPressed();
                 break;
             case R.id.tv_detail:
+                getInfoDetail();
                 break;
         }
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-    }
-
-//    private void getInfoDetail() {
-//        String parentFolder;
-//        parentFolder = Consts.ARTICAL_FILE_PATH;
-//        File file = new File(Consts.ARTICAL_FILE_PATH + item.getId() + Consts.AUDIO_DOWNLOAD_SUF);
-//
-//
-//        if (file != null && file.exists()) {
-//            if(item.getProgress() == item.getCount()) {
-//                IntentManager.startTrainGuideActivity(mContext, type, item);
-//            } else {
-//                IntentManager.startTrainActivity(mContext, type, item);
-//            }
-//        } else {
-//            DownloadManager downloadManager = DownloadManager.getInstance();
-//            downloadManager.initAppDownloadInfo(parentFolder, item.getId(), item.getUrl());
-//            downloadManager.setDownloadListener(new DownloadManager.DownloadListener() {
-//                @Override
-//                public void onDownloadSuccess() {
-//                downloadDialog.dismiss();
-//                IntentManager.startTrainActivity(ListenSubjectActivity.this, type, item);
-//                }
-//
-//                @Override
-//                public void onDownloadFail() {
-//                downloadButton.setVisibility(View.VISIBLE);
-//                progressbar.setVisibility(View.GONE);
-//                cancelButton.setVisibility(View.GONE);
-//                downloadDialog.setCancelable(true);
-//                }
-//
-//                @Override
-//                public void onDownloadCancel() {
-//
-//                }
-//
-//                @Override
-//                public void onDownloadProgress(int position) {
-//                progressbar.setProgress(position);
-//                }
-//            });
-//            downloadManager.startDownload(false);
-//        }
-//    }
-
-    private void getArticleList() {
+    private void getArticleInfo() {
         HttpManager.getArticleInfo(new AcademyHandler(this) {
             @Override
             protected void handleSuccessMessage(Object object) {
                 onDismissLoadingDialog();
                 HandleInfo handleInfo = (HandleInfo) object;
-                articleData = YJson.getObj(handleInfo.getData(), ArticleData.class);
-                if (articleData != null) {
-                    subjectView.setText(String.format(getString(R.string.subject), articleData.getArticle().getName()));
-                    authorView.setText(String.format(getString(R.string.author), articleData.getArticle().getWriter()));
-                    translatorView.setText(String.format(getString(R.string.translator), articleData.getArticle().getTranslator()));
-                    timeView.setText(String.format(getString(R.string.time), articleData.getArticle().getTime()));
-                    sourceView.setText(String.format(getString(R.string.source), articleData.getArticle().getSource()));
-                    introView.setText(articleData.getArticle().getDescription());
+                articleItem = YJson.getObj(handleInfo.getData(), ArticleItem.class);
+                if (articleItem != null) {
+                    subjectView.setText(String.format(getString(R.string.subject), articleItem.getName()));
+                    authorView.setText(String.format(getString(R.string.author), articleItem.getWriter()));
+                    translatorView.setText(String.format(getString(R.string.translator), TextUtils.isEmpty(articleItem.getTranslator())?"":articleItem.getTranslator()));
+                    timeView.setText(String.format(getString(R.string.time), articleItem.getTime()));
+                    sourceView.setText(String.format(getString(R.string.source), articleItem.getSource()));
+                    introView.setText(articleItem.getDescription());
                 }
             }
 
             @Override
             protected void handleError(int errorCode, String errorMsg) {
                 onDismissLoadingDialog();
-
-
-                articleData = YJson.getObj(errorMsg, ArticleData.class);
-                if (articleData != null) {
-                    subjectView.setText(String.format(getString(R.string.subject), articleData.getArticle().getName()));
-                    authorView.setText(String.format(getString(R.string.author), articleData.getArticle().getWriter()));
-                    translatorView.setText(String.format(getString(R.string.translator), articleData.getArticle().getTranslator()));
-                    timeView.setText(String.format(getString(R.string.time), articleData.getArticle().getTime()));
-                    sourceView.setText(String.format(getString(R.string.source), articleData.getArticle().getSource()));
-                    introView.setText("    " + articleData.getArticle().getDescription());
-                }
             }
         }, id);
+    }
+
+    private void getInfoDetail() {
+        String url = articleItem.getArticleURL();
+        String id = url.substring(url.lastIndexOf("/"));
+        final File file = new File(Consts.ARTICLE_FILE_PATH + id + Consts.AUDIO_DOWNLOAD_SUF);
+
+        if (file != null && file.exists()) {
+            startActivity(getPdfFileIntent(file));
+        } else {
+            DownloadManager downloadManager = DownloadManager.getInstance();
+            downloadManager.initAppDownloadInfo(Consts.ARTICLE_FILE_PATH, id, url);
+            downloadManager.setDownloadListener(new DownloadManager.DownloadListener() {
+                @Override
+                public void onDownloadSuccess() {
+                    downloadBar.setVisibility(View.INVISIBLE);
+                    startActivity(getPdfFileIntent(file));
+                }
+
+                @Override
+                public void onDownloadFail() {
+                    downloadBar.setVisibility(View.INVISIBLE);
+                    Toaster.show(ArticleInfoActivity.this, R.string.download_fail);
+                }
+
+                @Override
+                public void onDownloadCancel() {
+                    downloadBar.setVisibility(View.INVISIBLE);
+                }
+
+                @Override
+                public void onDownloadProgress(int position) {
+                    downloadBar.setVisibility(View.VISIBLE);
+                    downloadBar.setProgress(position);
+                }
+            });
+            downloadManager.startDownload(false);
+        }
+    }
+
+    public static Intent getPdfFileIntent(File file) {
+        Intent intent = new Intent("android.intent.action.VIEW");
+        intent.addCategory("android.intent.category.DEFAULT");
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        Uri uri = Uri.fromFile(file);
+        intent.setDataAndType(uri, "application/pdf");
+        return intent;
     }
 }

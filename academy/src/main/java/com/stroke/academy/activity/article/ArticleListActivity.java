@@ -96,7 +96,7 @@ public class ArticleListActivity extends BaseActivity implements
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        IntentManager.startArticleInfoActivity(this, mData.getArticles().get(position).getId());
+        IntentManager.startArticleInfoActivity(this, mData.getArticles().get(position - 1).getId());
     }
 
     private void getArticleList() {

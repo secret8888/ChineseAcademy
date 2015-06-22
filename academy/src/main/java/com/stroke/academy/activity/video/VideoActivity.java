@@ -62,7 +62,7 @@ public class VideoActivity extends BaseActivity implements View.OnClickListener{
     protected void initControls(Bundle savedInstanceState) {
         titleView.setText(videoItem.getName());
         speakerView.setText(String.format(getString(R.string.speaker), videoItem.getSpeaker()));
-        contentView.setText(AES256.decrypt(videoItem.getDescription()));
+        contentView.setText(videoItem.getDescription());
         contentView.setMovementMethod(ScrollingMovementMethod.getInstance());
 
         if (!TextUtils.isEmpty(videoItem.getUrlios())) {

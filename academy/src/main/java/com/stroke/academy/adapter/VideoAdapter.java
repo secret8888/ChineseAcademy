@@ -30,9 +30,9 @@ public class VideoAdapter extends BaseAdapter{
 		this.items = items;
 
 		options = new DisplayImageOptions.Builder()
-				.showImageOnLoading(R.drawable.ic_loading)
-				.showImageForEmptyUri(R.drawable.ic_loading)
-				.showImageOnFail(R.drawable.ic_loading).cacheInMemory(true)
+				.showImageOnLoading(R.drawable.ic_launcher)
+				.showImageForEmptyUri(R.drawable.ic_launcher)
+				.showImageOnFail(R.drawable.ic_launcher).cacheInMemory(true)
 				.cacheOnDisk(true).build();
 	}
 	
@@ -67,7 +67,7 @@ public class VideoAdapter extends BaseAdapter{
 
 		ImageLoader.getInstance().displayImage(items.get(position).getImgURL(), viewHolder.indexView, options);
 		viewHolder.titleView.setText(items.get(position).getName());
-		viewHolder.contentView.setText(AES256.decrypt(items.get(position).getDescription()));
+		viewHolder.contentView.setText(items.get(position).getDescription());
 		return convertView;
 	}
 

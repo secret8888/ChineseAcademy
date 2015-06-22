@@ -65,12 +65,25 @@
                 android:textSize="@dimen/ts_14"
                 />
 
+            <ProgressBar
+                android:id="@+id/pbar_download"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_width="250dp"
+                android:layout_height="5dp"
+                android:max="100"
+                android:progressDrawable="@drawable/progressbar_color"
+                android:visibility="invisible"
+                />
+
             <TextView
                 android:id="@+id/tv_detail"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/academy_space_huge"
+                android:layout_marginTop="@dimen/academy_space_medium"
                 android:paddingTop="@dimen/academy_space_middle"
                 android:paddingBottom="@dimen/academy_space_middle"
                 android:gravity="center"

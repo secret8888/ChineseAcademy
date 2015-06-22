@@ -31,7 +31,7 @@ public class Consts {
     public static final String TEMP_FILE_PATH = MAIN_FILE_PATH + "temp/";
     public static final String AVATAR_CACHE_FILE = TEMP_FILE_PATH + "avatar.png";
 
-    public static final String ARTICAL_FILE_PATH = MAIN_FILE_PATH + "download/";
+    public static final String ARTICLE_FILE_PATH = MAIN_FILE_PATH + "download/article/";
 
     /*
      * 网络连接超时时间
