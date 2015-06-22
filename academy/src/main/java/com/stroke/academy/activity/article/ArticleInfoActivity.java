@@ -14,12 +14,15 @@ import com.stroke.academy.common.constant.IntentConsts;
 import com.stroke.academy.common.http.AcademyHandler;
 import com.stroke.academy.common.http.HttpManager;
 import com.stroke.academy.common.util.AES256;
+import com.stroke.academy.common.util.DownloadManager;
 import com.stroke.academy.common.util.Logcat;
 import com.stroke.academy.common.util.Utils;
 import com.stroke.academy.model.ArticleData;
 import com.stroke.academy.model.HandleInfo;
 import com.stroke.academy.view.refresh.RefreshListView;
 import com.youdao.yjson.YJson;
+
+import java.io.File;
 
 /**
  * Created by emilyu on 6/11/15.
@@ -93,7 +96,52 @@ public class ArticleInfoActivity extends BaseActivity implements
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
     }
+
+//    private void getInfoDetail() {
+//        String parentFolder;
+//        parentFolder = Consts.ARTICAL_FILE_PATH;
+//        File file = new File(Consts.ARTICAL_FILE_PATH + item.getId() + Consts.AUDIO_DOWNLOAD_SUF);
+//
+//
+//        if (file != null && file.exists()) {
+//            if(item.getProgress() == item.getCount()) {
+//                IntentManager.startTrainGuideActivity(mContext, type, item);
+//            } else {
+//                IntentManager.startTrainActivity(mContext, type, item);
+//            }
+//        } else {
+//            DownloadManager downloadManager = DownloadManager.getInstance();
+//            downloadManager.initAppDownloadInfo(parentFolder, item.getId(), item.getUrl());
+//            downloadManager.setDownloadListener(new DownloadManager.DownloadListener() {
+//                @Override
+//                public void onDownloadSuccess() {
+//                downloadDialog.dismiss();
+//                IntentManager.startTrainActivity(ListenSubjectActivity.this, type, item);
+//                }
+//
+//                @Override
+//                public void onDownloadFail() {
+//                downloadButton.setVisibility(View.VISIBLE);
+//                progressbar.setVisibility(View.GONE);
+//                cancelButton.setVisibility(View.GONE);
+//                downloadDialog.setCancelable(true);
+//                }
+//
+//                @Override
+//                public void onDownloadCancel() {
+//
+//                }
+//
+//                @Override
+//                public void onDownloadProgress(int position) {
+//                progressbar.setProgress(position);
+//                }
+//            });
+//            downloadManager.startDownload(false);
+//        }
+//    }
 
     private void getArticleList() {
         HttpManager.getArticleInfo(new AcademyHandler(this) {

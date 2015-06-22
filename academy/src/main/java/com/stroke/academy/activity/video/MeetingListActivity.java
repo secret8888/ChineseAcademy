@@ -133,23 +133,8 @@ public class MeetingListActivity extends BaseActivity implements
             protected void handleError(int errorCode, String errorMsg) {
                 onMessageLoad();
                 onDismissLoadingDialog();
-
-
-                MeetingData meetingData = YJson.getObj(errorMsg, MeetingData.class);
-                meetingData.getMeetings().removeAll(Utils.nullCollection());
-                if (mData == null) {
-                    mData = meetingData;
-                    mAdapter = new MeetingAdapter(MeetingListActivity.this, mData.getMeetings());
-                    contentView.setAdapter(mAdapter);
-                    if (Integer.parseInt(mData.getTotalPage()) > 1) {
-                        contentView.setPullLoadEnable(true);
-                    }
-                } else {
-                    mData.addMeetings(meetingData.getMeetings());
-                    mAdapter.notifyDataSetChanged();
-                }
             }
-        }, meetingStr, currentPage, Consts.DEFAULT_PAGE_SIZE);
+        }, meetingId, currentPage, Consts.DEFAULT_PAGE_SIZE);
     }
 
 

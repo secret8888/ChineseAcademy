@@ -1,5 +1,7 @@
 package com.stroke.academy.common.http;
 
+import android.text.TextUtils;
+
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
@@ -72,15 +74,16 @@ public class AcademyHttpClient {
      */
     public static synchronized HandleInfo getHttpMessage(String result) {
         HandleInfo msg = new HandleInfo();
-        JSONObject jObject;
         try {
-            jObject = new JSONObject(result);
-            if (jObject.has("json")) {
-                JSONObject valueObject = new JSONObject(AES256.decrypt(jObject.getString("json")));
-                Logcat.d("TAG", "value : " + valueObject.toString());
-                msg.setRetCode(valueObject.optString("retCode"));
-                msg.setRetDesc(valueObject.optString("retDesc"));
-                msg.setData(valueObject.optString("Data"));
+            JSONObject valueObject = new JSONObject(result);
+            Logcat.d("TAG", "value : " + valueObject.toString());
+            String data = valueObject.optString("data");
+            String retCode = valueObject.optString("retCode");
+            msg.setRetCode(retCode);
+            msg.setData(data);
+            if(!TextUtils.isEmpty(data) && Integer.parseInt(retCode) != AcademyHandler.RESULT_CODE_SUCCESS) {
+                JSONObject dataObject = new JSONObject(data);
+                msg.setRetDesc(dataObject.optString("errMsg"));
             }
         } catch (Exception e) {
             Logcat.e(TAG, "AcademyHttpClient getHttpMessage exception",

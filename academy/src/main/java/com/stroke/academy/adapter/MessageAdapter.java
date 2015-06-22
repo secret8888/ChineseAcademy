@@ -45,7 +45,7 @@ public class MessageAdapter extends BaseAdapter{
 		if(convertView == null){
 			viewHolder = new ViewHolder();
 			convertView = LayoutInflater.from(context).inflate(R.layout.adapter_message, parent, false);
-			viewHolder.typeView = (TextView) convertView.findViewById(R.id.tv_day);
+			viewHolder.typeView = (TextView) convertView.findViewById(R.id.tv_type);
 			viewHolder.titleView = (TextView) convertView.findViewById(R.id.tv_title);
 			convertView.setTag(viewHolder);
 		}else{

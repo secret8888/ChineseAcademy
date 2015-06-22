@@ -3,6 +3,7 @@ package com.stroke.academy.activity.setting;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,6 +21,10 @@ import com.stroke.academy.common.util.PreferenceUtils;
 import com.stroke.academy.common.util.Toaster;
 import com.stroke.academy.common.util.Utils;
 import com.stroke.academy.model.HandleInfo;
+import com.umeng.update.UmengUpdateAgent;
+import com.umeng.update.UmengUpdateListener;
+import com.umeng.update.UpdateResponse;
+import com.umeng.update.UpdateStatus;
 
 public class SettingActivity extends BaseActivity implements View.OnClickListener{
 
@@ -72,6 +77,26 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
 
 	public void onHelpClick(View view) {
 		IntentManager.startHelpActivity(this);
+	}
+
+	public void onUpdateClick(View view) {
+		onShowLoadingDialog();
+		UmengUpdateAgent.setUpdateAutoPopup(false);
+		UmengUpdateAgent.setUpdateListener(new UmengUpdateListener() {
+			@Override
+			public void onUpdateReturned(int updateStatus,UpdateResponse updateInfo) {
+				onDismissLoadingDialog();
+				switch (updateStatus) {
+					case UpdateStatus.Yes: // has update
+						UmengUpdateAgent.showUpdateDialog(SettingActivity.this, updateInfo);
+						break;
+					case UpdateStatus.No: // has no update
+						Toaster.showMsg(SettingActivity.this, "已是最新版本");
+						break;
+				}
+			}
+		});
+		UmengUpdateAgent.update(this);
 	}
 
 	public void onSwitchAccountClick(View view) {

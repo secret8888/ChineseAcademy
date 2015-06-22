@@ -11,13 +11,13 @@ public class HttpManager {
 
 	private final static String TAG = HttpManager.class.getSimpleName();
 
-	private static void asyncGet(AcademyHandler handler, final String url, JSONObject valueObject) {
-		Logcat.d("TAG", "params : " + valueObject.toString());
-		RequestParams requestParams = new RequestParams();
-		requestParams.put("jsonData", AES256.encrypt(valueObject.toString()));
-		AcademyHttpClient.get(url,
-				requestParams, new AcademyHttpResponseHandler(handler));
-	}
+//	private static void asyncGet(AcademyHandler handler, final String url, JSONObject valueObject) {
+//		Logcat.d("TAG", "params : " + valueObject.toString());
+//		RequestParams requestParams = new RequestParams();
+//		requestParams.put("jsonData", AES256.encrypt(valueObject.toString()));
+//		AcademyHttpClient.get(url,
+//				requestParams, new AcademyHttpResponseHandler(handler));
+//	}
 
 	/**
 	 * 登录接口
@@ -27,14 +27,11 @@ public class HttpManager {
 	 */
 	public static void login(final AcademyHandler handler, String userName,
 			String password) {
-		try {
-			JSONObject valueObject = new JSONObject();
-			valueObject.put("username", userName);
-			valueObject.put("password", password);
-			asyncGet(handler, "/ChinaStroke/user/login?", valueObject);
-		} catch (JSONException e) {
-			handler.handleError(AcademyHandler.RESULT_CODE_ERROR, null);
-		}
+		RequestParams requestParams = new RequestParams();
+		requestParams.put("username", userName);
+		requestParams.put("password", password);
+		AcademyHttpClient.get("/ChinaStroke/user/Login?",
+				requestParams, new AcademyHttpResponseHandler(handler));
 	}
 
 	/**
@@ -44,26 +41,20 @@ public class HttpManager {
 	 * @param currentPage
 	 */
 	public static void getMeetingDayList(final AcademyHandler handler, int currentPage, int pageSize) {
-		try {
-			JSONObject valueObject = new JSONObject();
-			valueObject.put("currentPage", String.valueOf(currentPage));
-			valueObject.put("pageSize", String.valueOf(pageSize));
-			asyncGet(handler, "/ChinaStroke/video/meetingDay?", valueObject);
-		} catch (JSONException e) {
-			handler.handleError(AcademyHandler.RESULT_CODE_ERROR, null);
-		}
+		RequestParams requestParams = new RequestParams();
+		requestParams.put("currentPage", String.valueOf(currentPage));
+		requestParams.put("pageSize", String.valueOf(pageSize));
+		AcademyHttpClient.get("/ChinaStroke/video/meetingDay?",
+				requestParams, new AcademyHttpResponseHandler(handler));
 	}
 
 	public static void getMeetingList(final AcademyHandler handler, String meetingStr, int currentPage, int pageSize) {
-		try {
-			JSONObject valueObject = new JSONObject();
-			valueObject.put("meetingStr", meetingStr);
-			valueObject.put("currentPage", String.valueOf(currentPage));
-			valueObject.put("pageSize", String.valueOf(pageSize));
-			asyncGet(handler, "/ChinaStroke/video/meeting?", valueObject);
-		} catch (JSONException e) {
-			handler.handleError(AcademyHandler.RESULT_CODE_ERROR, null);
-		}
+		RequestParams requestParams = new RequestParams();
+		requestParams.put("meetingStr", meetingStr);
+		requestParams.put("currentPage", String.valueOf(currentPage));
+		requestParams.put("pageSize", String.valueOf(pageSize));
+		AcademyHttpClient.get("/ChinaStroke/video/meeting?",
+				requestParams, new AcademyHttpResponseHandler(handler));
 	}
 
 	/**
@@ -75,16 +66,13 @@ public class HttpManager {
 	 * @param pageSize
 	 */
 	public static void getVideoList(final AcademyHandler handler, String meetingId, String dayId, int currentPage, int pageSize) {
-		try {
-			JSONObject valueObject = new JSONObject();
-			valueObject.put("meetingId", meetingId);
-			valueObject.put("dayId", dayId);
-			valueObject.put("currentPage", String.valueOf(currentPage));
-			valueObject.put("pageSize", String.valueOf(pageSize));
-			asyncGet(handler, "/ChinaStroke/video/recordVideos?", valueObject);
-		} catch (JSONException e) {
-			handler.handleError(AcademyHandler.RESULT_CODE_ERROR, null);
-		}
+		RequestParams requestParams = new RequestParams();
+		requestParams.put("meetingId", meetingId);
+		requestParams.put("dayId", dayId);
+		requestParams.put("currentPage", String.valueOf(currentPage));
+		requestParams.put("pageSize", String.valueOf(pageSize));
+		AcademyHttpClient.get("/ChinaStroke/video/recordVideos?",
+				requestParams, new AcademyHttpResponseHandler(handler));
 	}
 
 	/**
@@ -94,14 +82,11 @@ public class HttpManager {
 	 * @param pageSize
 	 */
 	public static void getArticleList(final AcademyHandler handler, int currentPage, int pageSize) {
-		try {
-			JSONObject valueObject = new JSONObject();
-			valueObject.put("currentPage", String.valueOf(currentPage));
-			valueObject.put("pageSize", String.valueOf(pageSize));
-			asyncGet(handler, "/ChinaStroke/article/articleList?", valueObject);
-		} catch (JSONException e) {
-			handler.handleError(AcademyHandler.RESULT_CODE_ERROR, null);
-		}
+		RequestParams requestParams = new RequestParams();
+		requestParams.put("currentPage", String.valueOf(currentPage));
+		requestParams.put("pageSize", String.valueOf(pageSize));
+		AcademyHttpClient.get("/ChinaStroke/article/articleList?",
+				requestParams, new AcademyHttpResponseHandler(handler));
 	}
 
 	/**
@@ -111,13 +96,10 @@ public class HttpManager {
 	 * @param id
 	 */
 	public static void getArticleInfo(final AcademyHandler handler, String id) {
-		try {
-			JSONObject valueObject = new JSONObject();
-			valueObject.put("id", id);
-			asyncGet(handler, "/ChinaStroke/article/articleInfo?", valueObject);
-		} catch (JSONException e) {
-			handler.handleError(AcademyHandler.RESULT_CODE_ERROR, null);
-		}
+		RequestParams requestParams = new RequestParams();
+		requestParams.put("id", id);
+		AcademyHttpClient.get("/ChinaStroke/article/articleInfo?",
+				requestParams, new AcademyHttpResponseHandler(handler));
 	}
 
 //	/**

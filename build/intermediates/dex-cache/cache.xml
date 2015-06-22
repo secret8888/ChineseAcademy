@@ -44,6 +44,13 @@
         <dex dex="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/build/intermediates/pre-dexed/debug/bcprov-jdk15on-152-3da891fa4d6a2621f2df4aeb1b0584a9695140cc.jar" />
     </item>
     <item
+        jar="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/libs/umeng-update-v2.6.0.1.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="7bfeea30c4995f90a4374ce4177772a4579f2797">
+        <dex dex="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/build/intermediates/pre-dexed/debug/umeng-update-v2.6.0.1-cdaf4bdebbc973ca6f7506060c1f5b73ec276403.jar" />
+    </item>
+    <item
         jar="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/academy/libs/YDJson-1.0.3.jar"
         jumboMode="false"
         revision="22.0.0"

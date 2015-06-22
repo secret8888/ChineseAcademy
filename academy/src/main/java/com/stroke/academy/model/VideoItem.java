@@ -27,6 +27,8 @@ public class VideoItem implements Serializable{
 
     private String url;
 
+    private String period;
+
     public String getId() {
         return id;
     }
@@ -105,5 +107,13 @@ public class VideoItem implements Serializable{
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getPeriod() {
+        return period;
+    }
+
+    public void setPeriod(String period) {
+        this.period = period;
     }
 }

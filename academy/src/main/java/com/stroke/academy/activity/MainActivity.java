@@ -18,6 +18,7 @@ import com.stroke.academy.common.util.Toaster;
 import com.stroke.academy.fragment.MainFragment;
 import com.stroke.academy.fragment.MessageFragment;
 import com.stroke.academy.fragment.MineFragment;
+import com.umeng.update.UmengUpdateAgent;
 
 public class MainActivity extends BaseFragmentActivity {
 
@@ -43,6 +44,7 @@ public class MainActivity extends BaseFragmentActivity {
     @Override
     protected void initControls(Bundle savedInstanceState) {
         initView();
+        UmengUpdateAgent.update(this);
     }
 
     @Override

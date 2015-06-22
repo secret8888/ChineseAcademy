@@ -37,6 +37,8 @@ public class MessageFragment extends BaseFragment implements OnClickListener {
 
 	@Override
 	protected void initControls(Bundle savedInstanceState) {
+		contentView.setPullLoadEnable(false);
+		contentView.setPullRefreshEnable(false);
 		items = new ArrayList<>();
 		items.add(new MessageItem("系统消息", "\"中国卒中\"APP试用通知！！！",
 				"“中国卒中”APP 将从 2015.06.26 日起为广大用户提供试用版本,试用期限暂定3个月至 2015.10.01。后续进展敬请关注..."));
@@ -52,7 +54,7 @@ public class MessageFragment extends BaseFragment implements OnClickListener {
 		contentView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				IntentManager.startMessageDetailActivity(getActivity(), items.get(position));
+				IntentManager.startMessageDetailActivity(getActivity(), items.get(position-1));
 			}
 		});
 	}

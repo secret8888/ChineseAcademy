@@ -31,6 +31,8 @@ public class Consts {
     public static final String TEMP_FILE_PATH = MAIN_FILE_PATH + "temp/";
     public static final String AVATAR_CACHE_FILE = TEMP_FILE_PATH + "avatar.png";
 
+    public static final String ARTICAL_FILE_PATH = MAIN_FILE_PATH + "download/";
+
     /*
      * 网络连接超时时间
      */
@@ -57,4 +59,9 @@ public class Consts {
      * 退出登录标记
      */
     public static final int SETTING_LOGOUT_TAG = 1;
+
+    public static final String AUDIO_DOWNLOAD_SUF = ".suf";
+
+    public static final String AUDIO_DOWNLOAD_TEMP = ".temp";
+
 }

@@ -26,8 +26,8 @@ public class AcademyHttpResponseHandler extends AsyncHttpResponseHandler {
         this.handler = handler;
     }
     
-    protected boolean isMessageAvailabe(HandleInfo handleInfo){
-        if (Utils.isMessageAvaliabe(handleInfo, handler)) {
+    protected boolean isMessageAvaliable(HandleInfo handleInfo){
+        if (Utils.isMessageAvaliable(handleInfo, handler)) {
             return true;
         }
         return false;
@@ -46,7 +46,7 @@ public class AcademyHttpResponseHandler extends AsyncHttpResponseHandler {
         Logcat.d("TAG", "success result : " + response);
         HandleInfo handleInfo = AcademyHttpClient
                 .getHttpMessage(response);
-        if (isMessageAvailabe(handleInfo)) {
+        if (isMessageAvaliable(handleInfo)) {
             sendSuccessMessage(AcademyHandler.RESULT_CODE_SUCCESS,
                     handleInfo);
         }

@@ -207,7 +207,7 @@ public class Utils {
 	 * @param handler
 	 * @return
 	 */
-	public static boolean isMessageAvaliabe(HandleInfo msgInfo,
+	public static boolean isMessageAvaliable(HandleInfo msgInfo,
 			AcademyHandler handler) {
 
 		if (msgInfo == null) {
@@ -217,7 +217,7 @@ public class Utils {
 		}
 
 		if (!checkMessageCode(msgInfo.getRetCode(),
-				msgInfo.getData(), handler)) {
+				msgInfo.getRetDesc(), handler)) {
 			return false;
 		}
 
