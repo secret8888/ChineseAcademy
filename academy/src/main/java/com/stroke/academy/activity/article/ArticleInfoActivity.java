@@ -5,27 +5,20 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.stroke.academy.R;
 import com.stroke.academy.activity.base.BaseActivity;
-import com.stroke.academy.adapter.ArticleListAdapter;
 import com.stroke.academy.annotation.ViewId;
 import com.stroke.academy.common.constant.Consts;
 import com.stroke.academy.common.constant.IntentConsts;
 import com.stroke.academy.common.http.AcademyHandler;
 import com.stroke.academy.common.http.HttpManager;
-import com.stroke.academy.common.util.AES256;
 import com.stroke.academy.common.util.DownloadManager;
-import com.stroke.academy.common.util.Logcat;
 import com.stroke.academy.common.util.Toaster;
-import com.stroke.academy.common.util.Utils;
-import com.stroke.academy.model.ArticleData;
 import com.stroke.academy.model.ArticleItem;
 import com.stroke.academy.model.HandleInfo;
-import com.stroke.academy.view.refresh.RefreshListView;
 import com.youdao.yjson.YJson;
 
 import java.io.File;

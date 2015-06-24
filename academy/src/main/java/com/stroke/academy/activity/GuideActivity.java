@@ -10,9 +10,7 @@ import com.stroke.academy.R;
 import com.stroke.academy.activity.base.BaseActivity;
 import com.stroke.academy.annotation.ViewId;
 import com.stroke.academy.common.constant.PreferenceConsts;
-import com.stroke.academy.common.util.AES256;
 import com.stroke.academy.common.util.IntentManager;
-import com.stroke.academy.common.util.Logcat;
 import com.stroke.academy.common.util.PreferenceUtils;
 
 

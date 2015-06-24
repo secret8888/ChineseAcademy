@@ -31,12 +31,12 @@
     <string name="message">消息</string>
     <string name="setting">设置</string>
     <string name="mine">我</string>
-    <string name="main_title">中国卒中协会</string>
+    <string name="main_title">中国卒中学院</string>
     <string name="meeting_video">会议视频</string>
     <string name="mobile_check">移动查房</string>
     <string name="network_meeting">网络会议</string>
     <string name="base_train">基础培训</string>
-    <string name="doc_browse">文件速览</string>
+    <string name="doc_browse">文献速览</string>
     <string name="international_online">国际在线</string>
 
     <!-- setting -->

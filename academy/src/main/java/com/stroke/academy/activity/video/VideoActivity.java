@@ -2,29 +2,18 @@ package com.stroke.academy.activity.video;
 
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
-import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.VideoView;
 
 import com.stroke.academy.R;
 import com.stroke.academy.activity.base.BaseActivity;
 import com.stroke.academy.annotation.ViewId;
 import com.stroke.academy.common.constant.IntentConsts;
-import com.stroke.academy.common.constant.PreferenceConsts;
-import com.stroke.academy.common.util.AES256;
-import com.stroke.academy.common.util.IntentManager;
-import com.stroke.academy.common.util.PreferenceUtils;
 import com.stroke.academy.model.VideoItem;
 import com.stroke.academy.view.VideoControllerView;
-
-import org.w3c.dom.Text;
 
 /**
  * http://video.weibo.com/show?fid=1034:8dfaaddc758ba9ab595da6269fecaf5d&type=mp4&reason=&retcode=&from=timeline&isappinstalled=0

@@ -44,13 +44,6 @@
         <dex dex="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/ChineseAcademy/academy/build/intermediates/pre-dexed/debug/android-support-v4-7633c111c228e146217d75796ce2dec900d7ddc1.jar" />
     </item>
     <item
-        jar="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/ChineseAcademy/academy/libs/bcprov-jdk15on-152.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="88a941faf9819d371e3174b5ed56a3f3f7d73269">
-        <dex dex="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/ChineseAcademy/academy/build/intermediates/pre-dexed/debug/bcprov-jdk15on-152-c4742230206dfd44a2f7b9c68e0a035ef81640bd.jar" />
-    </item>
-    <item
         jar="/home/emilyu/android/studioworkspace/ChineseAcademy_V1.0.0/ChineseAcademy/academy/libs/android-async-http-1.4.7.jar"
         jumboMode="false"
         revision="22.0.0"

@@ -7,7 +7,6 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.stroke.academy.common.constant.Consts;
 import com.stroke.academy.common.constant.HttpConsts;
-import com.stroke.academy.common.util.AES256;
 import com.stroke.academy.common.util.Logcat;
 import com.stroke.academy.model.HandleInfo;
 

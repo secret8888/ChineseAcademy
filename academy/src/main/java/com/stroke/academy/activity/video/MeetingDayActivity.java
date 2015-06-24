@@ -1,39 +1,23 @@
 package com.stroke.academy.activity.video;
 
-import android.graphics.Paint;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.MediaController;
 import android.widget.TextView;
-import android.widget.VideoView;
 
 import com.stroke.academy.R;
-import com.stroke.academy.activity.base.BaseActivity;
 import com.stroke.academy.activity.base.BaseFragmentActivity;
-import com.stroke.academy.adapter.MeetingDayAdapter;
 import com.stroke.academy.adapter.MeetingFragmentAdapter;
 import com.stroke.academy.annotation.ViewId;
 import com.stroke.academy.common.constant.Consts;
-import com.stroke.academy.common.constant.PreferenceConsts;
 import com.stroke.academy.common.http.AcademyHandler;
 import com.stroke.academy.common.http.HttpManager;
-import com.stroke.academy.common.util.AES256;
-import com.stroke.academy.common.util.IntentManager;
-import com.stroke.academy.common.util.Logcat;
-import com.stroke.academy.common.util.PreferenceUtils;
 import com.stroke.academy.common.util.Utils;
 import com.stroke.academy.model.HandleInfo;
 import com.stroke.academy.model.MeetingDayData;
-import com.stroke.academy.view.refresh.RefreshListView;
 import com.youdao.yjson.YJson;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by emilyu on 6/11/15.

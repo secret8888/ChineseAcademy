@@ -1,11 +1,6 @@
 package com.stroke.academy.common.http;
 
 import com.loopj.android.http.RequestParams;
-import com.stroke.academy.common.util.AES256;
-import com.stroke.academy.common.util.Logcat;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class HttpManager {
 
