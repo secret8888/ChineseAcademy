@@ -265,8 +265,9 @@ public class DownloadManager {
                     File src = new File((String) msg.obj);
                     //检查安装包完整性（简单检查安装包大小）
                     if (src.length() != apkDownloadUtil.mContentSize) {
-                        apkDownloadUtil.startDownload(false);
-                        Toaster.show(AcademyApplication.getInstance(), R.string.download_fail_and_restart);
+//                        apkDownloadUtil.startDownload(true);
+                        src.delete();
+                        Toaster.show(AcademyApplication.getInstance(), R.string.download_fail_retry);
                         return;
                     }
                     apkDownloadUtil.downloadThread = null;

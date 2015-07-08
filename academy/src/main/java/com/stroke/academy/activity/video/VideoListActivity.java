@@ -128,7 +128,7 @@ public class VideoListActivity extends BaseActivity implements View.OnClickListe
                 onMessageLoad();
                 onDismissLoadingDialog();
             }
-        }, meetingId, dayId, currentPage, Consts.DEFAULT_PAGE_SIZE);
+        }, dayId, meetingId, currentPage, Consts.DEFAULT_PAGE_SIZE);
     }
 
 

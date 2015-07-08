@@ -88,8 +88,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="android-support-v4" level="project" />
     <orderEntry type="library" exported="" name="okhttp-2.4.0" level="project" />
-    <orderEntry type="library" exported="" name="YDAnimation-1.0.1" level="project" />
     <orderEntry type="library" exported="" name="bcprov-jdk15on-152" level="project" />
+    <orderEntry type="library" exported="" name="YDAnimation-1.0.1" level="project" />
     <orderEntry type="library" exported="" name="universal-image-loader-1.9.4-SNAPSHOT" level="project" />
     <orderEntry type="library" exported="" name="umeng-update-v2.6.0.1" level="project" />
     <orderEntry type="library" exported="" name="android-async-http-1.4.7" level="project" />
